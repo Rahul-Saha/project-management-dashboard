@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Dashboard</title>
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -13,159 +14,32 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./sidebar.css">
     <style>
-      td {
+      /* td {
           padding-left: 2em;
-      }
-      /*budget csss */
-      .chart-wrap {
-        margin-left: 50px;
-        font-family: sans-serif;
-        width:300px;
-        height:70px;  
-      }
-      .chart-wrap .title {
-        font-weight: bold;
-        font-size: 1.62em;
-        padding: 0.5em 0 1.8em 0;
-        text-align: center;
-        white-space: nowrap;
-      }
-      .chart-wrap.vertical .grid {
-        transform: translateY(-175px) translateX(175px) rotate(-90deg);
-      }
-      .chart-wrap.vertical .grid .bar::after {
-        transform: translateY(-50%) rotate(45deg);
-        display: block;
-      }
-      .chart-wrap.vertical .grid::before,
-      .chart-wrap.vertical .grid::after {
-        transform: translateX(-0.2em) rotate(90deg);
-      }
-      .chart-wrap .grid {
-        position: relative;
-        padding: 5px 0 5px 0;
-        height: 100%;
-        width: 100%;
-        border-left: 2px solid #aaa;
-        background: repeating-linear-gradient(
-          90deg,
-          transparent,
-          transparent 19.5%,
-          rgba(170, 170, 170, 0.7) 20%
-        );
-      }
-      .chart-wrap .grid::before {
-        font-size: 0.8em;
-        font-weight: bold;
-        content: "0%";
-        position: absolute;
-        left: -0.5em;
-        top: -1.5em;
-      }
-      .chart-wrap .grid::after {
-        font-size: 0.8em;
-        font-weight: bold;
-        content: "100%";
-        position: absolute;
-        right: -1.5em;
-        top: -1.5em;
-      }
-      .chart-wrap .bar {
-        width: var(--bar-value);
-        height: 50px;
-        margin: 30px 0;
-        background-color: #f16335;
-        border-radius: 0 3px 3px 0;
-      }
-      .chart-wrap .bar:hover {
-        opacity: 0.7;
-      }
-      .chart-wrap .bar::after {
-        content: attr(data-name);
-        margin-left: 100%;
-        padding: 10px;
-        display: inline-block;
-        white-space: nowrap;
-      }
-      /* overall tusk status */
-      .pie-chart-div{
-    width: 350px;
-    border: 1px solid grey;
-    display: inline-block;
-    margin-top: 0px;
-}
-
-#pie-chart-container {
-  display: flex;
-  align-items: center;
-}
-
-#pie-chart {
-  background: conic-gradient(
-    green 95deg,
-    red 95deg 125deg,
-    yellow 125deg 190deg,
-    grey 190deg 360deg
-  );
-  margin-left: 15%;
-  margin-bottom: 5%;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-#legenda {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 200px;
-}
-
-.entry {
-  display: flex;
-  align-items: center;
-}
-
-.entry-color {
-  height: 10px;
-  width: 10px;
-}
-
-.entry-text {
-  margin-left: 5px;
-}
-
-#color-green {
-  background-color: green;
-}
-
-#color-red {
-  background-color: red;
-}
-
-#color-yellow {
-  background-color: yellow;
-}
-
-#color-grey {
-  background-color: grey;
-}
-.horizantal{
- padding-left: 2%;
- margin-top: -35px;
-}
-.third-div{
-  display: flex;
-}
-.budget{
-  display: inline-block;
-}
+      } */
     </style>
   </head>
   <body>
+    <header class="header" id="header">
+      <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+      <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
+                <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> </div>
+            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+        </nav>
+    </div>
+
+
     <div>
       <div class="ps-3">
         <div>
@@ -279,63 +153,62 @@
               </tfoot>
             </table>
           </div>
-        </div>
-      </div>
-     </div>
 
-<div class="third-div">
-      <!-- overall tusk status -->
-
-  <div class="horizantal">
-      <div class="pie-chart-div">
-        <h3 style="text-align: center;">Overall Task Status</h3>
-        <div id="pie-chart-container">
-            <div id="pie-chart"></div>
-            <div id="legenda">
-                <div>
-                    <div class="entry">
-                    <div id="color-green" class="entry-color"></div>
-                    <div class="entry-text">Complete</div>
-                    </div>
-                    <div class="entry">
-                    <div id="color-red" class="entry-color"></div>
-                    <div class="entry-text">Overdue</div>
-                    </div>
-                    <div class="entry">
-                    <div id="color-yellow" class="entry-color"></div>
-                    <div class="entry-text">In Progress</div>
-                    </div>
-                    <div class="entry">
-                    <div id="color-grey" class="entry-color"></div>
-                    <div class="entry-text">Not Started</div>
-                </div>
-            </div>
-        </div>
-    </div> 
-   </div>
-
-    <!-- budget status    -->
-      
-    <div class="budget">
-        <div class="chart-wrap">
-          <h2 class="title" style="margin-top: 20px;">Budget</h2>
-          <div class="grid horizontal" style="margin-top:-20px;">
-            <div
-              class="bar"
-              style="--bar-value: 85%"
-              data-name="Your Blog"
-              title="Your Blog 85%"
-            ></div>
-            <div
-              class="bar"
-              style="--bar-value: 23%"
-              data-name="Medium"
-              title="Medium 23%"
-            ></div>
+          <div class="col-6">
+            
           </div>
         </div>
+      </div>
     </div>
+
+    <div class="third-div">
+          <!-- overall task status -->
+
+      <div class="horizantal">
+        <div class="pie-chart-div">
+          <h3 style="text-align: center;">Overall Task Status</h3>
+          <div id="pie-chart-container">
+            <div id="pie-chart"></div>
+            <div id="legenda">
+              <div>
+                <div class="entry">
+                <div id="color-green" class="entry-color"></div>
+                <div class="entry-text">Complete</div>
+                </div>
+                <div class="entry">
+                <div id="color-red" class="entry-color"></div>
+                <div class="entry-text">Overdue</div>
+                </div>
+                <div class="entry">
+                <div id="color-yellow" class="entry-color"></div>
+                <div class="entry-text">In Progress</div>
+                </div>
+                <div class="entry">
+                <div id="color-grey" class="entry-color"></div>
+                <div class="entry-text">Not Started</div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+        <!-- budget status    -->
+          
+        <div class="budget">
+            <div class="chart-wrap">
+              <h2 class="title" style="margin-top: 20px;">Budget</h2>
+              <div class="grid horizontal" style="margin-top:-20px;">
+                <div class="bar" style="--bar-value: 85%" data-name="Your Blog" title="Your Blog 85%"></div>
+                <div
+                  class="bar"
+                  style="--bar-value: 23%"
+                  data-name="Medium"
+                  title="Medium 23%"
+                ></div>
+              </div>
+            </div>
+        </div>
+        </div>
     </div>
- </div>
   </body>
 </html>
