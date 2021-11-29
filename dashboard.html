@@ -14,162 +14,177 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- CSS only -->
 
     <link rel="stylesheet" href="cssgraph_bar.css">
     <link rel="stylesheet" href="cssgraph_plot.css">
 
     <link rel="stylesheet" href="./dashboard.css">
     <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="./top-nav.css">
     <style>
       /* td {
           padding-left: 2em;
-      } */
+      }  */
     </style>
   </head>
   <body>
-    <header class="header" id="header">
-      <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-      <div class="header_img">  </div>
-      <!-- <img src="https://i.imgur.com/hczKIze.jpg" alt=""> -->
-    </header>
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
-                <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
-        </nav>
-    </div>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+    <div class="row">
+      <div class="left" style="background-color:rgb(29, 191, 245);">
+        <h2>Menu</h2>
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+        <ul id="myMenu">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="./master-data.html">Master Data/table</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+          <li><a href="#">Create Forms</a></li>
+          <li style="padding-top: 200%;" ><div class="dropup">
+            <a class="dropbtn" href="">Settings</a>
+            <div class="dropup-content">
+              <a href="#">color</a>
+              <a href="#">fonts</a>
+              <a href="#">time</a>
+              <a href="#">calendar</a>
+            </div>
+          </div></li>
+        </ul>
+      </div>
+      
+      <div class="right" style="background-color:white">
 
-
-    <div>
-      <div class="ps-3">
         <div>
-          <p class="text-secondary h5 pt-2">PROJECT MANAGEMENT DASHBOARD</p>
-        </div>
-        <div class="col-6">
-          <table class="table">
-            <tbody class="w-75">
-              <tr>
-                <th class="table-dark table-bordered w-25" scope="row">PROJECT NAME</th>
-                <td class="border-0 ps-5">Project Management Dashboard</td>
-              </tr>
-              <tr>
-                <th class="table-dark " scope="row">REPORT DATE</th>
-                <td class="border-0 ps-5">29-11-2021</td>
-              </tr>
-              <tr>
-                <th class="table-dark" scope="row">PROJECT STATUS</th>
-                <td class="border-0 ps-5">On Track</td>
-              </tr>
-              <tr>
-                <th class="table-dark">COMPLETED</th>
-                <td class="border-0 ps-5">10%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-12">
+        <div class="ps-3">
+          <div>
+            <p class="text-secondary h5 pt-2">PROJECT MANAGEMENT DASHBOARD</p>
+          </div>
           <div class="col-6">
-            <table class="table table-sm border-0 table-bordered">
-              <thead>
-                <tr class="bg-secondary text-light p-2">
-                  <th scope="col">TASKS</th>
-                  <th scope="col">ASSIGNED TO</th>
-                  <th scope="col">PRIORITY</th>
-                  <th scope="col">STATUS</th>
-                </tr>
-              </thead>
-              <tbody class="text-center">
-                <tr class="ps-2">
-                  <td >Set kick-off meeting</td>
-                  <td>Alex B.</td>
-                  <td></td>
-                  <td class="text-success">COMPLETE</td>
+            <table class="table">
+              <tbody class="w-75">
+                <tr>
+                  <th class="table-dark table-bordered w-25" scope="row">PROJECT NAME</th>
+                  <td class="border-0 ps-5">Project Management Dashboard</td>
                 </tr>
                 <tr>
-                  <td>Agree on objectives</td>
-                  <td>Frank C.</td>
-                  <td><span style='font-size:20px;'>&#9733;</span></td>
-                  <td class="text-success">COMPLETE</td>
+                  <th class="table-dark " scope="row">REPORT DATE</th>
+                  <td class="border-0 ps-5">29-11-2021</td>
                 </tr>
                 <tr>
-                  <td>Detailed Requests</td>
-                  <td>Jacob S.</td>
-                  <td></td>
-                  <td class="text-success">COMPLETE</td>
+                  <th class="table-dark" scope="row">PROJECT STATUS</th>
+                  <td class="border-0 ps-5">On Track</td>
                 </tr>
                 <tr>
-                  <td>Hardware Requests</td>
-                  <td>Jacob S.</td>
-                  <td><span style='font-size:20px;'>&#9733;</span></td>
-                  <td class="text-danger">OVERDUE</td>
-                </tr>
-                <tr>
-                  <td>Final Resource Plan</td>
-                  <td>Jacob S.</td>
-                  <td></td>
-                  <td class="text-warning">INPROGRESS</td>
-                </tr>
-                <tr>
-                  <td>Staffing</td>
-                  <td>Alex B.</td>
-                  <td><span style='font-size:20px;'>&#9733;</span></td> 
-                <td class="text-warning">INPROGRESS</td>
-                </tr>
-                <tr>
-                  <td>Technical Requests</td>
-                  <td>Frank C.</td>
-                  <td></td>
-                  <td class="text-secondary">NOTSTARTED</td>
-                </tr>
-                <tr>
-                  <td>Testing</td>
-                  <td>Kennedy K.</td>
-                  <td><span style='font-size:20px;'>&#9733;</span></td>
-                  <td class="text-secondary">NOTSTARTED</td>
-                </tr>
-                <tr>
-                  <td>Dev. Complete</td>
-                  <td>Jacob S.</td>
-                  <td><span style='font-size:20px;'>&#9733;</span></td>
-                  <td class="text-secondary">NOTSTARTED</td>
-                </tr>
-                <tr>
-                  <td>Hardware Configuration</td>
-                  <td>Alex B.</td>
-                  <td></td>
-                  <td class="text-secondary">NOTSTARTED</td>
-                </tr>
-                <tr>
-                  <td>System Testing</td>
-                  <td>Kennedy K.</td>
-                  <td><span style='font-size:20px;'>&#9733;</span></td>
-                  <td class="text-secondary">NOTSTARTED</td>
+                  <th class="table-dark">COMPLETED</th>
+                  <td class="border-0 ps-5">10%</td>
                 </tr>
               </tbody>
-              <tfoot>
-                  <tr>
-                      <td class="bg-secondary" colspan="4">Launch</td>
-                  </tr>
-              </tfoot>
             </table>
           </div>
-
-          <div class="col-6">
-            
+          <div class="col-12">
+            <div class="col-6">
+              <table class="table table-sm border-0 table-bordered">
+                <thead>
+                  <tr class="bg-secondary text-light p-2">
+                    <th scope="col">TASKS</th>
+                    <th scope="col">ASSIGNED TO</th>
+                    <th scope="col">PRIORITY</th>
+                    <th scope="col">STATUS</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr class="ps-2">
+                    <td >Set kick-off meeting</td>
+                    <td>Alex B.</td>
+                    <td></td>
+                    <td class="text-success">COMPLETE</td>
+                  </tr>
+                  <tr>
+                    <td>Agree on objectives</td>
+                    <td>Frank C.</td>
+                    <td><span style='font-size:20px;'>&#9733;</span></td>
+                    <td class="text-success">COMPLETE</td>
+                  </tr>
+                  <tr>
+                    <td>Detailed Requests</td>
+                    <td>Jacob S.</td>
+                    <td></td>
+                    <td class="text-success">COMPLETE</td>
+                  </tr>
+                  <tr>
+                    <td>Hardware Requests</td>
+                    <td>Jacob S.</td>
+                    <td><span style='font-size:20px;'>&#9733;</span></td>
+                    <td class="text-danger">OVERDUE</td>
+                  </tr>
+                  <tr>
+                    <td>Final Resource Plan</td>
+                    <td>Jacob S.</td>
+                    <td></td>
+                    <td class="text-warning">INPROGRESS</td>
+                  </tr>
+                  <tr>
+                    <td>Staffing</td>
+                    <td>Alex B.</td>
+                    <td><span style='font-size:20px;'>&#9733;</span></td> 
+                  <td class="text-warning">INPROGRESS</td>
+                  </tr>
+                  <tr>
+                    <td>Technical Requests</td>
+                    <td>Frank C.</td>
+                    <td></td>
+                    <td class="text-secondary">NOTSTARTED</td>
+                  </tr>
+                  <tr>
+                    <td>Testing</td>
+                    <td>Kennedy K.</td>
+                    <td><span style='font-size:20px;'>&#9733;</span></td>
+                    <td class="text-secondary">NOTSTARTED</td>
+                  </tr>
+                  <tr>
+                    <td>Dev. Complete</td>
+                    <td>Jacob S.</td>
+                    <td><span style='font-size:20px;'>&#9733;</span></td>
+                    <td class="text-secondary">NOTSTARTED</td>
+                  </tr>
+                  <tr>
+                    <td>Hardware Configuration</td>
+                    <td>Alex B.</td>
+                    <td></td>
+                    <td class="text-secondary">NOTSTARTED</td>
+                  </tr>
+                  <tr>
+                    <td>System Testing</td>
+                    <td>Kennedy K.</td>
+                    <td><span style='font-size:20px;'>&#9733;</span></td>
+                    <td class="text-secondary">NOTSTARTED</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="bg-secondary" colspan="4">Launch</td>
+                    </tr>
+                </tfoot>
+              </table>
+            </div>
+  
+            <div class="col-6">
+              
+            </div>
           </div>
         </div>
       </div>
-
       <div class="third-div">
         
   
         <div class="horizantal">
 
           <!-- overall task status -->
+
           <div class="pie-chart-div">
             <h3 style="text-align: center;">Overall Task Status</h3>
             <div id="pie-chart-container">
@@ -250,7 +265,26 @@
         </div> -->
       </div>
 
-    
     </div>
+      </div>
+    </div>
+    
+    <script>
+    function myFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
   </body>
 </html>
